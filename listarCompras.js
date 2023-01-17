@@ -103,7 +103,7 @@ function deleteRow(id) {
 
   const productIndex = values.findIndex(product => product.id === id);
 
-  divResult.innerHTML = divResult.innerHTML - values[productIndex].qtdprice;
+  divResult.innerHTML = divResult.innerHTML - values[productIndex].qtdprice.toFixed(2);
   values.splice(productIndex, 1);
 }
 
