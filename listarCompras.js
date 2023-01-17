@@ -32,7 +32,7 @@ function captureValues() {
   let inputitemProduct = increment;
   let inputNameProduct = nameProduct.value;
   let inputQtdProduct = parseFloat(qtdProduct.value);
-  let inputPriceProduct = parseFloat(priceProduct.value);
+  let inputPriceProduct = parseFloat(priceProduct.value).toFixed(2);
   let inputQtdPriceProduct = parseFloat(qtdProduct.value) * parseFloat(priceProduct.value);
 
   if (inputNameProduct == "" || inputQtdProduct == "" || inputPriceProduct == "") {
@@ -91,7 +91,7 @@ function addRows(arrayInput) {
     nameProductValue.innerHTML = "<li>" + el.name + "</li>";
     qtdProductValue.innerHTML = el.qtd;
     priceProductValue.innerHTML = el.price;
-    qtdpriceProductValue = el.qtdprice;
+    qtdpriceProductValue.innerHTML = el.qtdprice.toFixed(2);
     removeProduct.innerHTML = `<button onclick="deleteRow(${el.id})">X</button>`;
   });
   
