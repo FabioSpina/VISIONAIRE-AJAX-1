@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>Lista de Compras</title>
+  <script src="https://unpkg.com/feather-icons">
+
+  </script>
+</head>
+
+<body>
+  <div class="header">
+    <h2>Lista de compras</h2>
+    <input id="nameProduct" type="text" placeholder="Nome do produto:">
+    <input id="qtdProduct" type="number" placeholder="Quantidade:">
+    <input id="priceProduct" type="text" placeholder="Valor estimado do produto (R$)">
+    <button id="addProduct" type="submit">Adicionar</button>
+  </div>
+  <div class="listProducts">
+    <h2>Produtos</h2>
+    <div class="searchProduct">
+      <input id="searchProductByName" type="text" placeholder="Buscar Produto:">
+      <button id="btnSearch"><i data-feather="search"></i></button>
+      <button id="btnSearchClose" onclick="closeSearch()">Fechar Pesquisa</button>
+    </div>
+    <hr>
+<ol>
+    <table id="tableProducts">
+      <tr>
+        <!-- <th>Item</th>             -->
+        <th>Nome</th>
+        <th>Quantidade</th>
+        <th>Preço Unitario</th>
+        <th>Subtotal</th>
+        <th>Remover</th>
+      </tr>
+      <table>
+</ol>
+        <div class="totalDiv"><span>Total: R$ </span><span id="result">0.00</span></div>
+        <div id="clearall"><i data-feather="trash-2"></i></div>
+  </div>
+  <script src="listarCompras.js"></script>
+  <script>
+    feather.replace()
+  </script>
+</body>
+
+</html>
